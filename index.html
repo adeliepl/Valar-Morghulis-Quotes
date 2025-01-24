@@ -8,12 +8,21 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <h1>⚔️ Valar Morghulis Quotes ⚔️</h1>
-        <p>Can you guess which Game of Thrones characters said this?</p>
+    
+    <div id="name-input" class="name-popup">
+        <p>Who dares to enter the realm of Westeros?</p>
+        <input type="text" id="player-name" placeholder="Enter your name, brave soul">
+        <button onclick="startQuiz()"> Swear Fealty</button>
 
-        <div class="quote-box">
-            <p id="quote-text">"When you play the game of thrones, you either win or you die."</p>
+    </div>
+
+    <div class="quiz-container" style="display: none;">
+        <h1>⚔️ Valar Morghulis Quotes ⚔️</h1>
+        <p>Prove your worth! Can you recall which character uttered these legendary words?</p>
+
+        <div class="quote-grid">
+            <p id="quote-text"></p>
+            <!-- Quotes will be dynamically inserted here by script.js -->
             <button onclick="showAnswerPopup()">Answer</button>
         </div>
 

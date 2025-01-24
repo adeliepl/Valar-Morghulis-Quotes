@@ -1,3 +1,15 @@
+let playerName = '';
+function startQuiz(){
+    playerName = document.getElementById('player-name').value.trim();
+    if (playerName){
+        document.getElementById('name-input').style.display = 'none';
+        document.querySelector('.quiz-container').style.display = 'block';
+        alert(`Welcome to Westeros, ${playerName}! Steel yourself for the challenge ahead!`);
+    } else {
+        alert('Even a Lannister wouldn`t forget their own name. Try again!');
+    }
+}
+
 const quotes = [
     {
         quote: "Tell them the North remembers. Tell them winter came for House Frey.",
@@ -25,7 +37,7 @@ const quotes = [
     },
     {
         quote: "Power is power.",
-        character: "Cersei",
+        character: "Cercei",
         house: "Lannister",
         sigil:"images/1090px-House_Lannister.webp"
     },
@@ -51,12 +63,25 @@ const quotes = [
 
 let currentQuoteIndex = 0;
 
-function showAnswerPopup(){
-    document.getElementById('popup').style.display = 'block';
+function displayQuotes() {
+    const quoteGrid = document.querySelector('.quote-grid');
+    quoteGrid.innerHTML = ''; // Clear existing content
+
+    quotes.forEach((item, index) => {
+        const quoteBox = document.createElement('div');
+        quoteBox.classList.add('quote-box');
+        quoteBox.innerHTML = `
+            <p>"${item.quote}"</p>
+            <button onclick="showAnswerPopup(${index})">Answer</button>
+        `;
+        quoteGrid.appendChild(quoteBox);
+    });
 }
 
-function closePopup(){
-    document.getElementById('popup').style.display = 'none';
+
+function showAnswerPopup(index) {
+    currentQuoteIndex = index;
+    document.getElementById('popup').style.display = 'block';
 }
 
 function checkAnswer(){
@@ -74,12 +99,11 @@ function checkAnswer(){
     closePopup();
 } 
 
-// Function to load a new quote
-function loadNewQuote(){
-    currentQuoteIndex = Math.floor(Math.random() * quotes.length);
-    document.getElementById('quote-text').innerText = quotes[currentQuoteIndex].quote;
-    document.getElementById('house-sigil').style.display = 'none';
+function closePopup(){
+    document.getElementById('popup').style.display = 'none';
 }
 
-window.onload = loadNewQuote;
+window.onload = function(){
+    displayQuote();
+};
 
