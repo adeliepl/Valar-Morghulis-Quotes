@@ -1,22 +1,3 @@
-window.onload = function () {
-    // Show the name input container after 3 seconds
-    setTimeout(() => {
-        document.getElementById('name-container').style.display = 'block';
-    }, 3000);
-};
-
-let playerName = '';
-function startQuiz() {
-    const playerName = document.getElementById('player-name').value.trim();
-    if (playerName) {
-        document.getElementById('name-input').style.display = 'none';
-        document.querySelector('.quiz-container').style.display = 'block';
-        alert(`Welcome to Westeros, ${playerName}! Prepare yourself for the challenge.`);
-    } else {
-        alert("Even a Lannister wouldn't forget their name! Try again.");
-    }
-}
-
 const quotes = [
     {
         quote: "Tell them the North remembers. Tell them winter came for House Frey.",
@@ -68,50 +49,62 @@ const quotes = [
     }
 ];
 
-let currentQuoteIndex = 0;
+// Once DOM is ready, build the card
+document.addEventListener("DOMContentLoaded", () => {
+    const container = document.getElementById("quote-container");
 
-function displayQuotes() {
-    const quoteGrid = document.querySelector('.quote-grid');
-    quoteGrid.innerHTML = ''; // Clear existing content
+    quotes.forEach((item) => {
+        // Create a card element
+        const card = document.createElement("div");
+        card.classList.add("quote-card");
 
-    quotes.forEach((item, index) => {
-        const quoteBox = document.createElement('div');
-        quoteBox.classList.add('quote-box');
-        quoteBox.innerHTML = `
-            <p>"${item.quote}"</p>
-            <button onclick="showAnswerPopup(${index})">Answer</button>
-        `;
-        quoteGrid.appendChild(quoteBox);
+        // Quote text
+        const quoteText = document.createElement("p");
+        quoteText.classList.add("quote-text");
+        quoteText.textContent = `"${item.quote}"`;
+
+        // Answer button
+        const answerBtn = document.createElement("button");
+        answerBtn.classList.add("answer-btn");
+        answerBtn.textContent = "Answer";
+
+        // Hidden answer container 
+        const answerContainer = document.createElement("div");
+        answerContainer.classList.add("answer-container");
+
+        // Character & House info 
+        const characterInfo = document.createElement("p");
+        characterInfo.classList.add("character-info");
+        characterInfo.textContent = item.character; 
+
+        const houseName = document.createElement("span");
+        houseName.classList.add("house-name");
+        houseName.textContent = `House: ${item.house}`;
+
+        // Sigil image
+        const sigilImg = document.createElement("img");
+        sigilImg.classList.add("sigil");
+        sigilImg.src = `${item.house} Sigil`;
+
+        // Append elements to the card
+        answerContainer.appendChild(characterInfo);
+        answerContainer.appendChild(houseName);
+        answerContainer.appendChild(sigilImg);
+
+        card.appendChild(quoteText);
+        card.appendChild(answerBtn);
+        card.appendChild(answerContainer);
+
+        card.appendChild(quoteText);
+        card.appendChild(answerBtn);
+        card.appendChild(answerContainer);
+
+        container.appendChild(card);
+
+        // Reveal answer on button click 
+        answerBtn.addEventListener("click", () => {
+            answerContainer.classList.toggle("show");
+            
+        });
     });
-}
-
-
-function showAnswerPopup(index) {
-    currentQuoteIndex = index;
-    document.getElementById('popup').style.display = 'block';
-}
-
-function checkAnswer(){
-    const userAnswer = document.getElementById('user-answer').value.trim();
-    const correctAnswer = quotes[currentQuoteIndex].character;
-    
-    if (userAnswer.toLowerCase() === correctAnswer.toLowerCase()){
-    document.getElementById('feedback').innerText = 'Correct!';
-    document.getElementById('house-sigil').src = quotes[currentQuoteIndex].sigil;
-    document.getElementById('house-sigil').style.display = 'block';
-    } else {
-    document.getElementById('feedback').innerText = 'Incorrect. Try again!';
-    document.getElementById('house-sigil').style.display = 'none';
-    }
-    closePopup();
-} 
-
-function closePopup(){
-    document.getElementById('popup').style.display = 'none';
-}
-
-window.onload = function(){
-    displayQuote();
-};
-
-
+});
