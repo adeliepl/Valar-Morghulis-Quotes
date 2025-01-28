@@ -1,12 +1,19 @@
+window.onload = function () {
+    // Show the name input container after 3 seconds
+    setTimeout(() => {
+        document.getElementById('name-container').style.display = 'block';
+    }, 3000);
+};
+
 let playerName = '';
-function startQuiz(){
-    playerName = document.getElementById('player-name').value.trim();
-    if (playerName){
+function startQuiz() {
+    const playerName = document.getElementById('player-name').value.trim();
+    if (playerName) {
         document.getElementById('name-input').style.display = 'none';
         document.querySelector('.quiz-container').style.display = 'block';
-        alert(`Welcome to Westeros, ${playerName}! Steel yourself for the challenge ahead!`);
+        alert(`Welcome to Westeros, ${playerName}! Prepare yourself for the challenge.`);
     } else {
-        alert('Even a Lannister wouldn`t forget their own name. Try again!');
+        alert("Even a Lannister wouldn't forget their name! Try again.");
     }
 }
 
@@ -106,4 +113,5 @@ function closePopup(){
 window.onload = function(){
     displayQuote();
 };
+
 
