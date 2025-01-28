@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <title>Who dares to enter the realm of Westeros?</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Valar Morghulis Quotes</title>
@@ -9,35 +10,22 @@
     
 </head>
 <body>
-    
-    <div id="name-input" class="name-popup">
-        <p>Who dares to enter the realm of Westeros?</p>
-        <div id=""name-container" style=""display: none;">
-        <input type="text" id="player-name" placeholder="Enter your name, brave soul">
-        <button onclick="startQuiz()"> Swear Fealty</button>
-        </div>"
-    </div>
 
-    <div class="quiz-container" style="display: none;">
-        <h1>⚔️ Valar Morghulis Quotes ⚔️</h1>
-        <p>Prove your worth! Can you recall which character uttered these legendary words?</p>
+    <header>
+        <h1>Valar Morghulis Quotes</h1>
+        <h2>Prove your worth!</h2>
+    </header>
 
-        <div class="quote-grid">
-            <p id="quote-text"></p>
+    <main>
+        <div class="quotes-container" id="quotes-container">
             <!-- Quotes will be dynamically inserted here by script.js -->
-            <button onclick="showAnswerPopup()">Answer</button>
         </div>
+    </main>
 
-        <div id="popup" class="popup">
-        <p>Who said this? Arya, Tyrion, Daenerys, Jon, or Cercei?</p>
-        <input type="text" id="user-answer">
-        <button onclick="checkAnswer()">Submit</button>
-        <button onclick="closePopup()">Close</button>
-        </div>
+    <footer>
+        <p>Coded by Adélie Plumasseau</p>
+    </footer>
 
-        <img id="house-sigil" src="" alt="House Sigil" style="display: none;">
-        <p id="feedback"></p>
-    </div>
     <script src="script.js"></script>
 </body>
 </html>
