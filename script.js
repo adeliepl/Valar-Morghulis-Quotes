@@ -63,6 +63,12 @@ document.addEventListener("DOMContentLoaded", () => {
         quoteText.classList.add("quote-text");
         quoteText.textContent = `"${item.quote}"`;
 
+        // Text input for user guess
+        const guessInput = document.createElement("input");
+        guessInput.classList.add("guess-input");
+        guessInput.type ="text";
+        guessInput.placeholder = "Guess the character";
+        
         // Answer button
         const answerBtn = document.createElement("button");
         answerBtn.classList.add("answer-btn");
