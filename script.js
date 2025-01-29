@@ -69,10 +69,10 @@ document.addEventListener("DOMContentLoaded", () => {
         guessInput.type ="text";
         guessInput.placeholder = "Guess the character";
         
-        // Answer button
-        const answerBtn = document.createElement("button");
-        answerBtn.classList.add("answer-btn");
-        answerBtn.textContent = "Answer";
+        // Check answer button
+        const checkBtn = document.createElement("button");
+        checkBtn.classList.add("check-btn");
+        checkBtn.textContent = "Check Answer";
 
         // Hidden answer container 
         const answerContainer = document.createElement("div");
