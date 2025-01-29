@@ -77,8 +77,13 @@ main {
     line-height: 1.4;
 }
 
+/* Guess input */
+.guess-input {
+    
+}
+
 /* Answer button */
-.answer-btn {
+.check-btn {
     background: #a50000;
     color: #fff;
     border: 1px solid #600000;
@@ -87,9 +92,21 @@ main {
     cursor: pointer;
     margin: 0 auto;
     transition: 0.3 ease;
+    font-size: 1rem;
+    font-family: 'Cinzel', serif;
 }
 
-.answer-btn:hover {
+.check-btn:hover {
     background: #600000;
 }
+
+/*The revealed answer container */
+
+.answer-container {
+    margin-top: 1rem;
+    background: #cbb59a;
+    border-radius: 6px;
+    padding: 1rem;
+    display: none; /* Hidden by default */
+} 
 
