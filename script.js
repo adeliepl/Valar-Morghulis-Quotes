@@ -78,6 +78,8 @@ document.addEventListener("DOMContentLoaded", () => {
         const answerContainer = document.createElement("div");
         answerContainer.classList.add("answer-container");
 
+        // Feedback 
+
         // Character & House info 
         const characterInfo = document.createElement("p");
         characterInfo.classList.add("character-info");
@@ -96,21 +98,21 @@ document.addEventListener("DOMContentLoaded", () => {
         answerContainer.appendChild(characterInfo);
         answerContainer.appendChild(houseName);
         answerContainer.appendChild(sigilImg);
+        // need to add feedback to the answer container
 
         card.appendChild(quoteText);
-        card.appendChild(answerBtn);
-        card.appendChild(answerContainer);
-
-        card.appendChild(quoteText);
-        card.appendChild(answerBtn);
+        card.appendChild(guessInput);
+        card.appendChild(checkBtn);
         card.appendChild(answerContainer);
 
         container.appendChild(card);
 
-        // Reveal answer on button click 
-        answerBtn.addEventListener("click", () => {
-            answerContainer.classList.toggle("show");
-            
+        // Check answer event listener 
+        checkBtn.addEventListener("click", () => {
+            const guess = guessInput.value;  
         });
+
+        // Check answer function
+        
     });
 });
