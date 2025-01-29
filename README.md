@@ -1,6 +1,6 @@
 # ⚔️ Valar Morghulis Quotes ⚔️
 
-A fun and interactive quiz to testyour knowledge of Game of Thrones quotes. Do you have what it takes to claim the Iron Throne of trivia? 
+This is a simple Game of Thrones–themed quote guessing game. Users are presented with memorable quotes from the series, and they must type in who they think said each line. After submitting their guess, the correct character, House, and House sigil are revealed. 
 
 ## 🚀 Features 
 - Iconic quotes from various GoT characters.
@@ -22,10 +22,14 @@ A fun and interactive quiz to testyour knowledge of Game of Thrones quotes. Do y
 
 2. Open index.html in your browser.
 
+## 🤓 Recent Changes
+- Updated the card layout and styling for a more polished, medieval-fantasy aesthetic.
+- Improved responsiveness and accessibility by using semantic HTML elements and consistent CSS grid spacing.
+
 ## 🏆 Future Improvements
 
 Add more quotes and characters.
-Improve UI with animations.
+Animations: Add flip-card or fade-in effects to reveal answers with a more dynamic user experience.
 Deploy on GitHub Pages.
 
 ## 📜 License
