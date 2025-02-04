@@ -51,7 +51,7 @@ const quotes = [
 
 // Once DOM is ready, build the card
 document.addEventListener("DOMContentLoaded", () => {
-    const container = document.getElementById("quote-container");
+    const container = document.getElementById("quotes-container");
 
     quotes.forEach((item) => {
         // Create a card element
