@@ -126,5 +126,27 @@ document.addEventListener("DOMContentLoaded", () => {
             }
             answerContainer.style.display = "block"; // Show the answer container
         });
+
+        const whiteWalker = document.createElement("div");
+whiteWalker.classList.add("white-walker");
+document.body.appendChild(whiteWalker);
+
+function showWhiteWalker() {
+    whiteWalker.style.opacity = "1";  // Show full intensity
+    setTimeout(() => {
+        whiteWalker.style.opacity = "0"; // Fade out after 1.5s
+    }, 1500);
+}
+
+document.querySelectorAll(".check-btn").forEach((button, index) => {
+    button.addEventListener("click", () => {
+        const userGuess = document.querySelectorAll(".guess-input")[index].value.toLowerCase();
+        const correctAnswer = quotes[index].character.toLowerCase();
+        
+        if (userGuess !== correctAnswer) {
+            showWhiteWalker();
+        }
+    });
+});
     });
 });
