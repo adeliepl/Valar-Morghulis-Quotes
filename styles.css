@@ -48,29 +48,34 @@ main {
 }
 
 /* Quote Container */
-.quote-container {
+.quotes-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 1.5rem;
     max-width: 1200px;
     margin: 0 auto;
+    padding: 1rem;
 }
 
 /* Individual Quote Card */
-.quote-card {
+.quotes-card {
     background: #eee;
+    max-width: 500px;
+    width: 100%;
+    margin: 0 auto;
     border: 2px solid #aa7b39;
     border-radius: 8px;
-    padding: 1rem;
+    padding: 1.5rem;
     position:relative;
     text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
 }
 
 /* Quote Text */
-.quote-text {
+.quotes-text {
     font-style: italic;
     margin-bottom: 1rem;
     font-size: 1rem;
@@ -133,4 +138,10 @@ main {
     display: block;
     margin-bottom: 0.5rem;
     font-size: normal;
+}
+
+@media (max-width: 768px) {
+    .quotes-container {
+        grid-template-columns: repeat(auto-fill, minmax(100%, 1fr)); /* One per row */
+    }
 }
