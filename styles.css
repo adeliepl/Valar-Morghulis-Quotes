@@ -51,11 +51,12 @@ main {
 /* ❄️ Quiz Container Styling */ 
 .quotes-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
     max-width: 1200px;
     margin: 0 auto;
     padding: 1rem;
+    align-items: stretch;
 }
 
 /* 🐺 Stark-Themed Quote Cards */
@@ -66,13 +67,21 @@ main {
     margin: 0 auto;
     border: 2px solid #88A1A8;
     border-radius: 8px;
-    padding: 1.5rem;
+    padding: 1.8rem;
     position:relative;
     text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    box-shadow: 0px 4px 6px rgba(255, 255, 255, 0.1); /* Soft shadow for depth */
+    box-shadow: 0px 6px 12px rgba(255, 255, 255, 0.08); /* Soft shadow for depth */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.quote-card blockquote {
+    font-size: 1.2rem;
+    font-style: italic;
+    line-height: 1.5;
+    color: #C0C0C0; /* Soft Silver */
 }
 
 /* Quote Text */
@@ -89,6 +98,7 @@ main {
     margin-bottom: 1rem;
     padding: 0.3rem 0.5rem;
     border: 1px solid #88A1A8;
+    color: #B8D8E0;
     border-radius: 4px;
     text-align: center;
     font-size: 1rem;
@@ -153,7 +163,8 @@ main {
     background-size: cover;
     opacity: 0;  /* Initially invisible */
     transition: opacity 5s ease-in-out;
-    z-index: -1;  /* Keeps it in the background */
+    z-index: 999;  
+    pointer-events: none;
 }
 
 .white-walker::after {
@@ -168,7 +179,7 @@ main {
 
 @keyframes eerieFade {
     0% { opacity: 0; }
-    50% { opacity: 0.2; } /* Slightly visible */
+    50% { opacity: 0.3; } /* Slightly visible */
     100% { opacity: 0; }
 }
 
