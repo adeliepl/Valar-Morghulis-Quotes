@@ -92,7 +92,9 @@ document.addEventListener("DOMContentLoaded", () => {
         // Sigil image
         const sigilImg = document.createElement("img");
         sigilImg.classList.add("sigil");
-        sigilImg.src = `${item.house} Sigil`;
+        // sigilImg.src = `${item.house} Sigil`;
+        // sigilImg.alt = `${item.house} Sigil`;
+        sigilImg.src = item.sigil;
 
         // Append elements to the card
         answerContainer.appendChild(characterInfo);
@@ -109,10 +111,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
         // Check answer event listener 
         checkBtn.addEventListener("click", () => {
-            const guess = guessInput.value;  
+            const guess = guessInput.value.trim().toLowerCase(); 
+            const correctAnswer = item.character.toLowerCase();
+            if(guess === correctAnswer){
+                alert("Correct!");
+            } else {
+                alert(`Incorrect! The correct answer is ${item.character}.`);
+            }
+            answerContainer.style.display = "block"; // Show the answer container
         });
-
-        // Check answer function
-        
     });
 });
