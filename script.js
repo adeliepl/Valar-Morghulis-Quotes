@@ -1,15 +1,21 @@
 const quotes = [
     {
-        quote: "Tell them the North remembers. Tell them winter came for House Frey.",
-        character: "Arya",
+        quote: "A ruler who hides behind paid executioners soon forgets what death is.",
+        character: "Ned",
         house: "Stark",
         sigil:"images/1090px-House_Stark.webp" 
     },
     {
-        quote: "When you play the game of thrones, you win or you die.",
-        character: "Cersei",
+        quote: "Oaths are meaningless words with no real hold upon any man, except those too weak to pick up a sword.",
+        character: "Jaime",
         house: "Lannister",
         sigil:"images/1090px-House_Lannister.webp"
+    },
+    {
+        quote: "Let it be fear.",
+        character: "Daenerys",
+        house: "Targaryen",
+        sigil:"images/1090px-House_Targaryen.webp"
     },
     {
         quote: "A lion does not concern himself with the opinion of sheep.",
@@ -18,16 +24,16 @@ const quotes = [
         sigil:"images/1090px-House_Lannister.webp"
     },
     {
-        quote: "The night is dark and full of terrors.",
-        character: "Melisandre",
-        house: "Baratheon",
-        sigil:"images/1090px-House_Baratheon.webp"
+        quote: "We don’t mutilate little girls for vengeance.",
+        character: "Doran",
+        house: "Martell",
+        sigil:"images/1200px-House_Martell.webp"
     },
     {
-        quote: "Power is power.",
-        character: "Cercei",
-        house: "Lannister",
-        sigil:"images/1090px-House_Lannister.webp"
+        quote: "The people are hungry for more than just food. They crave distractions..",
+        character: "Margaery",
+        house: "Tyrell",
+        sigil:"images/1090px-House_Tyrell.svg.png"
     },
     {
         quote: "Yes. All men must die, but we are not men.",
@@ -56,11 +62,11 @@ document.addEventListener("DOMContentLoaded", () => {
     quotes.forEach((item) => {
         // Create a card element
         const card = document.createElement("div");
-        card.classList.add("quote-card");
+        card.classList.add("quotes-card");
 
         // Quote text
         const quoteText = document.createElement("p");
-        quoteText.classList.add("quote-text");
+        quoteText.classList.add("quotes-text");
         quoteText.textContent = `"${item.quote}"`;
 
         // Text input for user guess
