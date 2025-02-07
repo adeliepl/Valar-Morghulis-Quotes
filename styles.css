@@ -19,20 +19,23 @@ body {
 /* Header */
 header {
     text-align: center;
-    padding: 1rem;
+    padding: 2rem;
     background: #0D0D0D;
     color: #C0C0C0;
 }
 
 header h1 {
-    font-size: 2.2rem;
-    margin-bottom: 0.5rem;
+    top: 5px;
+    font-size: 2.5rem;
+    margin-bottom: 0.2rem;
     letter-spacing: 2px;
 }
 
 header h2 {
     font-size: 1.2rem;
     font-weight: 400;
+    margin-top: -5px;
+    margin-bottom: 0.1rem
 }
 
 footer {
@@ -194,6 +197,46 @@ main {
     50% { opacity: 0.3; transform: translateY(0px); }
     100% { opacity: 0.1; transform: translateY(-10px);
     }
+}
+
+#game-container {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+#score-board{
+    margin-top: 10px;
+}
+
+#music-toggle{
+    background: linear-gradient(145deg, #283747, #1c2833); /* Dark iron look */
+    border: 2px solid #b3b6b7;
+    color: #b3b6b7;
+    font-family: "Cinzel", serif;
+    font-size: 1.1rem;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 4px #17202a;
+    transition: all 0.3s ease-in-out;
+    text-transform: uppercase;
+}
+
+#music-toggle:hover {
+    background: linear-gradient(145deg, #1c2833, #283747); /* Dark iron look */
+    color: #fff;
+    border: 2px solid #b3b6b7;
+    box-shadow: 0 2px #17202a;
+}
+
+#music-toggle:active {
+    background:#0f1a25;
+    transform: translateY(2px);
+    box-shadow: 0 2px #17202a;
 }
 
 @media (max-width: 768px) {
