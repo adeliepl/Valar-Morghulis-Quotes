@@ -294,6 +294,37 @@ main {
 }
 
 @media (max-width: 768px) {
+  h1{
+    font-size: 1.8rem;
+    margin-top: 40px;
+  }
+  h2 {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+  }
+  #scoreboard {
+    position: absolute;
+    top: 15px;
+    right: 140px;
+    font-size: 0.9rem;
+    padding: 8px;
+  }
+  .quote-card{
+    width: 90%;
+    max-width: 320px;
+    margin: 10px auto;
+    padding: 12px;
+  }
+
+  .guess-input{
+    font-size: 0.9rem;
+    padding: 6px;
+  }
+  .check-btn{
+    padding: 6px 12px;
+    font-size: 0.9rem;
+  }
+
   .quotes-container {
     grid-template-columns: repeat(
       auto-fill,
