@@ -14,6 +14,7 @@ This is a simple Game of Thrones–themed quote guessing game. Users are present
 ## Music Credit 
 🎼 The background music used in this project is royalty-free and provided by:
 Mindkeys - [Game of Thrones Theme - (Mindkeys Chillstep Remix)]
+
 This track is free to use, but please credit the original artist in any shared versions of this project. 
 
 🔗 https://soundcloud.com/mind-keys/game-of-thrones-theme-mindkeys-chillstep-remix-royalty-free?utm_source=chatgpt.com 
