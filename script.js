@@ -86,6 +86,22 @@ document.addEventListener("DOMContentLoaded", () => {
 
         // Feedback 
 
+        // Music Integration
+        const musicToggle = document.getElementById("music-toggle");
+        const backgroundMusic = new Audio("sounds/GOT3.wav");
+        backgroundMusic.loop = true;
+        backgroundMusic.volume = 0.2; // Set to 20% volume
+
+        musicToggle.addEventListener("click", function() {
+            if (backgroundMusic.paused) {
+                backgroundMusic.play();
+                musicToggle.textContent = "Pause Music";
+            } else {
+                backgroundMusic.pause();
+                musicToggle.textContent = "Play Music";
+            }
+        });
+
         // Character & House info 
         const characterInfo = document.createElement("p");
         characterInfo.classList.add("character-info");
