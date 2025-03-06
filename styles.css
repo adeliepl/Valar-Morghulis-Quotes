@@ -296,18 +296,20 @@ main {
 
 @media (max-width: 768px) {
   header {
-    padding: 1rem;
-    position: relative;
-    z-index: 1;
+    padding: 1rem; /* Reduce padding for phone */
+    padding-top: 3.5rem; /* Add padding to push header below game container */
+    position: relative; /* Ensure header is positioned for z-index */
+    z-index: 1; /* Keep header above other elements */
   }
 
-  h1{
-    font-size: 1.8rem;
-    margin-top: 0.5rem;
+  header h1 {
+    font-size: 1.8rem; /* Smaller for phone */
+    margin-bottom: 0.5rem; /* Space between h1 and h2 */
   }
-  h2 {
-    font-size: 1rem;
-    margin-bottom: 2rem;
+
+  header h2 {
+    font-size: 1rem; /* Slightly smaller */
+    margin-bottom: 1rem; /* Space below h2 */
   }
 
   main {
