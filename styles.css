@@ -14,6 +14,7 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  padding: 10px;
 }
 
 /* Header */
@@ -296,19 +297,30 @@ main {
 @media (max-width: 768px) {
   h1{
     font-size: 1.8rem;
-    margin-top: 40px;
+    margin-top: 0;
   }
   h2 {
-    font-size: 1.1rem;
+    font-size: 1rem;
     margin-bottom: 10px;
   }
+
+  main {
+    padding: 1rem; 
+  }
+
   #scoreboard {
-    position: absolute;
+    position: static;
     top: 15px;
     right: 140px;
     font-size: 0.9rem;
-    padding: 8px;
+    padding: 0.75rem 1rem;
   }
+
+  #music-toggle {
+    font-size: 0.9rem;
+    padding: 0.75rem 1.5rem;
+  }
+
   .quote-card{
     width: 90%;
     max-width: 320px;
@@ -330,5 +342,13 @@ main {
       auto-fill,
       minmax(100%, 1fr)
     ); /* One per row */
+  }
+  .white-walker {
+    width: 100vw;
+    height: 50vh;
+    transition: opacity 3s ease-in-out;
+  }
+  .white-walker::after{
+    display: none;
   }
 }
