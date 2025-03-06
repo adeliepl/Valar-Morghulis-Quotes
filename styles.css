@@ -295,6 +295,10 @@ main {
 }
 
 @media (max-width: 768px) {
+  header {
+    padding: 1rem;
+  }
+
   h1{
     font-size: 1.8rem;
     margin-top: 0;
@@ -313,12 +317,25 @@ main {
     top: 15px;
     right: 140px;
     font-size: 0.9rem;
-    padding: 0.75rem 1rem;
+    padding: 0.5rem 1rem;
+    margin-top: 0;
   }
 
   #music-toggle {
     font-size: 0.9rem;
-    padding: 0.75rem 1.5rem;
+    padding: 0.5rem 1rem;
+  }
+
+  #game-container {
+    position: static;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap:1rem;
+    margin: 0.5rem 0;
+    align-items: center;
   }
 
   .quote-card{
@@ -337,6 +354,10 @@ main {
     font-size: 0.9rem;
   }
 
+  .answer-container {
+    max-width: 50px;
+  }
+
   .quotes-container {
     grid-template-columns: repeat(
       auto-fill,
@@ -345,7 +366,7 @@ main {
   }
   .white-walker {
     width: 100vw;
-    height: 50vh;
+    height: 30vh;
     transition: opacity 3s ease-in-out;
   }
   .white-walker::after{
