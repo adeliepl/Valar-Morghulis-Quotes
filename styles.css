@@ -297,45 +297,48 @@ main {
 @media (max-width: 768px) {
   header {
     padding: 1rem;
+    position: relative;
+    z-index: 1;
   }
 
   h1{
     font-size: 1.8rem;
-    margin-top: 0;
+    margin-top: 0.5rem;
   }
   h2 {
     font-size: 1rem;
-    margin-bottom: 10px;
+    margin-bottom: 2rem;
   }
 
   main {
     padding: 1rem; 
   }
 
+  #game-container {
+    position: absolute;
+    top: 10px; /* Position at the top */
+    left: 10px; /* Align to the left edge */
+    right: 10px; /* Align to the right edge */
+    display: flex;
+    flex-direction: row; /* Side by side */
+    justify-content: space-between; /* Scoreboard on left, music toggle on right */
+    align-items: center;
+    z-index: 2; /* Ensure it’s above other elements */
+  }
+
   #scoreboard {
-    position: static;
-    top: 15px;
-    right: 140px;
-    font-size: 0.9rem;
-    padding: 0.5rem 1rem;
-    margin-top: 0;
+    position: static; /* Remove absolute positioning */
+    padding: 0.3rem 0.5rem; /* Smaller padding for phone */
+    font-size: 0.8rem; /* Smaller, easier to read */
+    border-width: 2px; /* Slightly thinner border */
+    box-shadow: 3px 3px 10px rgba(0,0,0,0.5); /* Softer shadow */
   }
 
   #music-toggle {
-    font-size: 0.9rem;
-    padding: 0.5rem 1rem;
-  }
-
-  #game-container {
-    position: static;
-    top: 20px;
-    right: 20px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    gap:1rem;
-    margin: 0.5rem 0;
-    align-items: center;
+    padding: 0.3rem 0.5rem; /* Smaller for phone */
+    font-size: 0.8rem; /* Smaller, easier to read */
+    border-width: 1px; /* Thinner border */
+    box-shadow: 0 2px #17202a; /* Softer shadow */
   }
 
   .quote-card{
