@@ -315,8 +315,8 @@ main {
   }
 
   #game-container {
-    position: absolute;
-    top: 10px; /* Position at the top */
+    position: fixed;
+    top: 0; /* At the very top */
     left: 10px; /* Align to the left edge */
     right: 10px; /* Align to the right edge */
     display: flex;
