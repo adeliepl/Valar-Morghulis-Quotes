@@ -315,7 +315,7 @@ main {
   }
 
   #game-container {
-    position: fixed;
+    position: fixed; /* Fix to the top of the viewport */
     top: 0; /* At the very top */
     left: 10px; /* Align to the left edge */
     right: 10px; /* Align to the right edge */
@@ -324,6 +324,7 @@ main {
     justify-content: space-between; /* Scoreboard on left, music toggle on right */
     align-items: center;
     z-index: 2; /* Ensure it’s above other elements */
+    padding: 0.5rem 0; /* Add some padding for spacing */
   }
 
   #scoreboard {
